@@ -1,6 +1,10 @@
 package main
 
-import "log"
+import (
+	"log"
+
+	_ "github.com/Leonardo-Henrique/elastic-viewer/src/config"
+)
 
 func main() {
 
