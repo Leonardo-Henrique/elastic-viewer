@@ -1,0 +1,8 @@
+elasticsearch:
+  host: "http://localhost:9200"
+  username: ""
+  password: ""
+
+  attempts: 10
+  interval: 6
+  timeout: 5
