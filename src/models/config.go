@@ -1,6 +1,6 @@
 package models
 
-type ElasticViewerConfigYML struct {
+type ElasticViewerConfigFile struct {
 	Elasticsearch struct {
 		Host              string `yaml:"host"`
 		Username          string `yaml:"username"`
