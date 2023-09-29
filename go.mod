@@ -2,4 +2,7 @@ module github.com/Leonardo-Henrique/elastic-viewer
 
 go 1.18
 
-require github.com/joho/godotenv v1.5.1 // indirect
+require (
+	github.com/gorilla/mux v1.8.0 // indirect
+	github.com/joho/godotenv v1.5.1 // indirect
+)

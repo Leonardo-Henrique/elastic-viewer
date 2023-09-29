@@ -8,14 +8,19 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/Leonardo-Henrique/elastic-viewer/src/config"
 	"github.com/Leonardo-Henrique/elastic-viewer/src/models"
 )
 
 type esClient models.ESClient
 
-func MakeESConn(esCredentials models.ESCredentials) *esClient {
+func MakeESConn() *esClient {
 	return &esClient{
-		ESCredentials: esCredentials,
+		ESCredentials: models.ESCredentials{
+			ESHost:     config.ELASTICSEARCH_HOST,
+			ESUsername: config.ELASTICSEARCH_USERNAME,
+			ESPassword: config.ELASTICSEARCH_PASSWORD,
+		},
 		ESClient: &http.Client{
 			Timeout: time.Second * 15,
 		},
